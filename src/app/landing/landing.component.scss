@@ -1,0 +1,27 @@
+.content-block{
+    height:600px;
+    width:auto;
+    filter: opacity(100%);
+}
+.content-block::before{
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-image: url("/assets/img/pc.jpg");
+    background-position:center;
+    background-repeat: repeat;
+}
+
+.text-box{
+    border-radius: 0.8em;
+    font-family: 'roboto';
+    background-color: rgba(99, 99, 99, 0.5);
+    color:white;
+    font-size: 48px;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}

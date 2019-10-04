@@ -1,0 +1,44 @@
+<div class="background-colors auth-wrapper d-flex no-block justify-content-center align-items-center">
+    <div class="shadow-container card auth-box">
+        <div class="shadow-container brand rounded-circle">
+        </div>
+        <div style="align-self: center">
+            <h1>Crear Cuenta</h1>
+        </div>
+        &nbsp;
+        <input type="text" class="input-spacing form-control" placeholder="Nombre" aria-label="Username"
+            aria-describedby="basic-addon1">
+        <input type="text" class="input-spacing form-control" placeholder="Correo" aria-label="Username"
+            aria-describedby="basic-addon1">
+        <input type="text" class="input-spacing form-control" placeholder="Contraseña" aria-label="Username"
+            aria-describedby="basic-addon1">
+        <select class="input-spacing form-control" id="exampleFormControlSelect1">
+            <option disabled>Seleccione</option>
+            <option>Soy Desarollador</option>
+            <option>Busco Desarollador</option>
+        </select>
+        <hr>
+        <button class="btn btn-primary button-radius" (click)="createAccount()">
+            <!-- <icon *ngIf="!userForm.valid">lock</icon>
+            <icon *ngIf="userForm.valid">lock_open</icon>-->
+            Crear cuenta
+        </button>
+        &nbsp;
+        <!--      <h4 style="align-self: center">Or Sign Up Using</h4>
+               <div style="align-self: center">
+                  <button fab class="facebook">
+                    <icon><i class="fab fa-facebook-f "></i></icon>
+                  </button>
+                  &nbsp;
+                  &nbsp;
+                  <button fab class="google">
+                    <icon><i class="fab fa-google "></i></icon>
+                  </button>
+                </div>
+                -->
+        &nbsp;
+        <div class="col-sm-12 text-left " style="align-self: center; font-size:0.8em">
+            ¿Ya tienes una cuenta? <a [routerLink]="['/ingresar']" class="link m-l-5 "><b>Ingresar</b></a>
+        </div>
+    </div>
+</div>
