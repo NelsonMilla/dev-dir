@@ -1,0 +1,71 @@
+<div
+  class="background-colors auth-wrapper d-flex no-block justify-content-center align-items-center"
+>
+  <div class="card auth-box shadow-container">
+    <div class="shadow-container brand rounded-circle"></div>
+    <div style="align-self: center">
+      <h1>Iniciar Sesión</h1>
+    </div>
+    &nbsp;
+    <form [formGroup]="formularioUsuarios">
+      <div>
+        <input
+          type="text"
+          class="form-control input-spacing"
+          placeholder="Correo "
+          aria-label="Username"
+          aria-describedby=""
+          formControlName="correo"
+        />
+        <small id="correo"
+         *ngIf="formErrors.correo"
+         class="form-text text-muted center"
+         >{{ formErrors.correo }}</small>
+      </div>
+      <div class="">
+        <input
+          type="password"
+          class="form-control input-spacing"
+          placeholder="Contraseña"
+          aria-label="Username"
+          aria-describedby=""
+          formControlName="contrasena"
+        />
+        <small
+          id="contrasena"
+          *ngIf="formErrors.contrasena"
+          class="form-text text-muted center"
+          >{{ formErrors.contrasena }}</small
+        >
+      </div>
+    </form>
+    <hr />
+    <button
+      class="btn btn-primary button-radius"
+      (click)="createAccount()"
+      [disabled]="!formularioUsuarios.valid"
+    >
+      <i *ngIf="!formularioUsuarios.valid" class="material-icons">lock</i>
+      <i *ngIf="formularioUsuarios.valid" class="material-icons">lock_open</i>
+      Ingresar
+    </button>
+    &nbsp; &nbsp;
+    <div
+      class="col-sm-12 text-left "
+      style="align-self: center; font-size:0.8em; margin-top: 8px"
+    >
+      <a [routerLink]="['/registrarse']" class="link m-l-5 "
+        ><b>Olvidé mi contraseña.</b></a
+      >
+    </div>
+    <div
+      class="col-sm-12 text-left "
+      style="align-self: center; font-size:0.8em"
+    >
+      ¿No tengo una cuenta?
+      <a [routerLink]="['/registrarse']" class="link m-l-5 "
+        ><b>Crear Cuenta.</b></a
+      >
+    </div>
+  </div>
+</div>
